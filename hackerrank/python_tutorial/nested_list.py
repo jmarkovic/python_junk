@@ -36,6 +36,6 @@ for val in range(total_inputs):
 students = sorted(students, key=lambda student: student[1])
 grades = [student[1] for student in students]
 second_lowest_grade = second_lowest(grades)
-filtered_students = [student for student in students if student[1] == second_lowest_grade]
+filtered_students = sorted([student for student in students if student[1] == second_lowest_grade])
 for student in filtered_students:
     print(student[0])
